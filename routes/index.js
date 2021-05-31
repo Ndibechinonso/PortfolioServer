@@ -22,7 +22,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 const userSchema = new mongoose.Schema({
-  fullName: String,
+  name: String,
   email: String,
   feedback: String
 })
@@ -33,7 +33,7 @@ const PortfolioVisitor = mongoose.model('PortfolioVisitor', userSchema)
 router.post('/', function (req, res) {
  
   PortfolioVisitor.create({
-    fullName: req.body.fullName,
+    name: req.body.name,
     email: req.body.email,
     feedback: req.body.feedback
   }, (err, newPortfolioVisitor) => {
