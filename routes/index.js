@@ -9,7 +9,7 @@ require('dotenv').config();
 var mongoose = require('mongoose');
 
 //Set up mongoose connection
-var mongoDB = process.env.DB_CONN;
+var mongoDB = 'mongodb+srv://nonso1:pipper@cluster0.h3kxv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, (err) => {
   if (!err) {
     console.log('database connection successful')
