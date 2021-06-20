@@ -5,8 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors'); 
 // const session = require('express-session');
-
-// var dotenv = require('dotenv');
+ var dotenv = require('dotenv');
 
 // dotenv.config()
 // const port = process.env.PORT||7000
